@@ -1,0 +1,25 @@
+{
+  "$schema": "https://raw.githubusercontent.com/AbyssalInteractive/citiizen-plugins/main/manifest.schema.json",
+  "schemaVersion": 1,
+  "registry": {
+    "name": "Abyssal Interactive — Citiizen Plugins",
+    "homepage": "https://github.com/AbyssalInteractive/citiizen-plugins",
+    "updatedAt": "2026-05-18"
+  },
+  "plugins": [
+    {
+      "id": "abyssal.sql-adminer",
+      "name": "SQL Adminer",
+      "description": "Lightweight loopback-only web UI to inspect and query the server's PostgreSQL database. Useful for debugging during development.",
+      "author": "Abyssal Interactive",
+      "certified": true,
+      "version": "1.0.0",
+      "minBackendVersion": "0.1.0",
+      "downloadUrl": "https://github.com/AbyssalInteractive/citiizen-plugin-sql-adminer/releases/download/v1.0.0/sql-adminer-1.0.0.zip",
+      "sha256": "769ba6fa839e511ec808c9b6bbe76ecc1e5f29f6942961c11cde28183939a8be",
+      "homepage": "https://github.com/AbyssalInteractive/citiizen-plugin-sql-adminer",
+      "iconUrl": "",
+      "commands": []
+    }
+  ]
+}

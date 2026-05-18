@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/AbyssalInteractive/citiizen-plugins/main/manifest.schema.json",
+  "title": "Citiizen plugin manifest",
+  "type": "object",
+  "required": ["schemaVersion", "plugins"],
+  "properties": {
+    "$schema":       { "type": "string", "format": "uri" },
+    "schemaVersion": { "type": "integer", "const": 1 },
+    "registry": {
+      "type": "object",
+      "properties": {
+        "name":      { "type": "string" },
+        "homepage":  { "type": "string", "format": "uri" },
+        "updatedAt": { "type": "string", "format": "date" }
+      }
+    },
+    "plugins": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/plugin" }
+    }
+  },
+  "$defs": {
+    "plugin": {
+      "type": "object",
+      "required": ["id", "name", "version", "downloadUrl", "sha256"],
+      "properties": {
+        "id":                { "type": "string", "pattern": "^[a-z0-9.-]+$", "description": "Unique reverse-DNS-ish identifier (e.g., 'abyssal.sql-adminer')." },
+        "name":              { "type": "string" },
+        "description":       { "type": "string" },
+        "author":            { "type": "string" },
+        "certified":         { "type": "boolean", "description": "True if this plugin is officially maintained by Abyssal Interactive." },
+        "version":           { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+(?:-[0-9A-Za-z-.]+)?$", "description": "SemVer." },
+        "minBackendVersion": { "type": "string", "description": "Minimum Citiizen.Backend version required." },
+        "downloadUrl":       { "type": "string", "format": "uri", "description": "HTTPS URL to a .zip containing the plugin DLL(s) at archive root." },
+        "sha256":            { "type": "string", "pattern": "^[a-f0-9]{64}$", "description": "Lowercase SHA-256 hex of the downloaded zip — verified by the launcher before extraction." },
+        "homepage":          { "type": "string", "format": "uri" },
+        "iconUrl":           { "type": "string" },
+        "commands":          { "type": "array", "items": { "type": "string" }, "description": "Chat commands exposed by the plugin (used by the launcher's pre-install collision detection)." }
+      },
+      "additionalProperties": false
+    }
+  }
+}
