@@ -16,7 +16,7 @@
       "version": "1.0.2",
       "minBackendVersion": "0.1.0",
       "downloadUrl": "https://github.com/AbyssalInteractive/citiizen-plugin-sql-adminer/releases/download/v1.0.2/sql-adminer-1.0.2.zip",
-      "sha256": "2c51bd81b0dc8464550553b254157c286c258dec2bbdfdea19271a4ab5e29d7b",
+      "sha256": "b11742e0bb683c33dd11082317d2cbcaa8b2eeb461c3a86e25556fb36b95ed53",
       "homepage": "https://github.com/AbyssalInteractive/citiizen-plugin-sql-adminer",
       "iconUrl": "",
       "commands": [],
