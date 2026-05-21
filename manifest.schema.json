@@ -6,7 +6,7 @@
   "required": ["schemaVersion", "plugins"],
   "properties": {
     "$schema":       { "type": "string", "format": "uri" },
-    "schemaVersion": { "type": "integer", "const": 1 },
+    "schemaVersion": { "type": "integer", "const": 2 },
     "registry": {
       "type": "object",
       "properties": {
@@ -36,7 +36,13 @@
         "sha256":            { "type": "string", "pattern": "^[a-f0-9]{64}$", "description": "Lowercase SHA-256 hex of the downloaded zip — verified by the launcher before extraction." },
         "homepage":          { "type": "string", "format": "uri" },
         "iconUrl":           { "type": "string" },
-        "commands":          { "type": "array", "items": { "type": "string" }, "description": "Chat commands exposed by the plugin (used by the launcher's pre-install collision detection)." }
+        "commands":          { "type": "array", "items": { "type": "string" }, "description": "Chat commands exposed by the plugin (used by the launcher's pre-install collision detection)." },
+        "permissions":       {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^([a-z]+\\.[a-z-]+|\\*)$" },
+          "uniqueItems": true,
+          "description": "Permissions requested by the plugin. The user is shown this list at install time and may uncheck individual permissions; runtime API calls gated by an unchecked permission are rejected by the plugin host. '*' grants every permission (shown with a red warning in the install UI)."
+        }
       },
       "additionalProperties": false
     }

@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/AbyssalInteractive/citiizen-plugins/main/manifest.schema.json",
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "registry": {
     "name": "Abyssal Interactive — Citiizen Plugins",
     "homepage": "https://github.com/AbyssalInteractive/citiizen-plugins",
@@ -13,13 +13,14 @@
       "description": "Lightweight loopback-only web UI to inspect and query the server's PostgreSQL database. Useful for debugging during development.",
       "author": "Abyssal Interactive",
       "certified": true,
-      "version": "1.0.0",
+      "version": "1.0.2",
       "minBackendVersion": "0.1.0",
-      "downloadUrl": "https://github.com/AbyssalInteractive/citiizen-plugin-sql-adminer/releases/download/v1.0.0/sql-adminer-1.0.0.zip",
-      "sha256": "769ba6fa839e511ec808c9b6bbe76ecc1e5f29f6942961c11cde28183939a8be",
+      "downloadUrl": "https://github.com/AbyssalInteractive/citiizen-plugin-sql-adminer/releases/download/v1.0.2/sql-adminer-1.0.2.zip",
+      "sha256": "2c51bd81b0dc8464550553b254157c286c258dec2bbdfdea19271a4ab5e29d7b",
       "homepage": "https://github.com/AbyssalInteractive/citiizen-plugin-sql-adminer",
       "iconUrl": "",
-      "commands": []
+      "commands": [],
+      "permissions": ["*"]
     },
     {
       "id": "abyssal.avehiclespawner",
@@ -33,7 +34,8 @@
       "sha256": "9a79690bc5cae6c558652983681dc459553acf2d4b7a10ae1873e3d4a0a7b8e1",
       "homepage": "https://github.com/AbyssalInteractive/citiizen-plugin-avehiclespawner",
       "iconUrl": "",
-      "commands": ["v"]
+      "commands": ["v"],
+      "permissions": ["world.spawn-vehicle"]
     }
   ]
 }
