@@ -4,7 +4,7 @@
   "registry": {
     "name": "Abyssal Interactive — Citiizen Plugins",
     "homepage": "https://github.com/AbyssalInteractive/citiizen-plugins",
-    "updatedAt": "2026-05-18"
+    "updatedAt": "2026-05-21"
   },
   "plugins": [
     {
@@ -20,6 +20,20 @@
       "homepage": "https://github.com/AbyssalInteractive/citiizen-plugin-sql-adminer",
       "iconUrl": "",
       "commands": []
+    },
+    {
+      "id": "abyssal.avehiclespawner",
+      "name": "AVehicleSpawner",
+      "description": "Spawns a vehicle 2 meters above the player and seats them as driver. Usage: /v <id_vehicle>.",
+      "author": "Abyssal Interactive",
+      "certified": true,
+      "version": "1.0.0",
+      "minBackendVersion": "0.1.0",
+      "downloadUrl": "https://github.com/AbyssalInteractive/citiizen-plugin-avehiclespawner/releases/download/v1.0.0/avehiclespawner-1.0.0.zip",
+      "sha256": "9a79690bc5cae6c558652983681dc459553acf2d4b7a10ae1873e3d4a0a7b8e1",
+      "homepage": "https://github.com/AbyssalInteractive/citiizen-plugin-avehiclespawner",
+      "iconUrl": "",
+      "commands": ["v"]
     }
   ]
 }
